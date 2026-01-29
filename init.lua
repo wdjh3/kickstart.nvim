@@ -35,6 +35,12 @@ end)
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Change how many spaces a tab takes
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 4
+vim.o.expandtab = false
+
 -- Save undo history
 vim.o.undofile = true
 
@@ -585,7 +591,7 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
+        clangd = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -871,6 +877,7 @@ require('lazy').setup({
         'javascript',
         'typescript',
         'bash',
+        'cpp',
       }
     end,
   },
